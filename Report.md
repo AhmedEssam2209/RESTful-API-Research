@@ -126,11 +126,11 @@ When a POST, PUT, PATCH, or DELETE operation requires significant processing tim
 
 Additionally, expose an endpoint that allows clients to check the status of the asynchronous request. Include the URI of this status endpoint in the \`Location\` header of the 202 response, so clients can monitor the progress by polling this status endpoint. For example:
 
-![](media/99bf4f538465a700353d31970aa33863.png)
+![](https://imgur.com/mQr2iRD.png)
 
 If the client sends a GET request to this endpoint, the response should contain the current status of the request. Optionally, it could also include an estimated time to completion or a link to cancel the operation.
 
-![](media/be446798f033e1cc41867b791a042191.png)![](media/71845d94684aaf767678e054b95d1b44.png)If the asynchronous operation creates a new resource, the status endpoint should return status code 303 (See Other) after the operation completes. In the 303 response, include a Location header that gives the URI of the new resource.
+![](https://imgur.com/7OLAcWq.png)If the asynchronous operation creates a new resource, the status endpoint should return status code 303 (See Other) after the operation completes. In the 303 response, include a Location header that gives the URI of the new resource.
 
 **Empty sets in message bodies**
 
@@ -144,7 +144,7 @@ Instead, design the API to support filtering through query strings, such as \`/o
 
 To manage potentially large response sizes from GET requests over collection resources, implement features to limit the amount of data returned by a single request. Consider supporting query strings that specify the maximum number of items to retrieve and a starting offset within the collection. This approach helps control the data volume and improves efficiency. For example:
 
-![](media/f56ac6815fb91e538d359e541a99983a.png)
+![](https://imgur.com/BHTjVxy.png)
 
 Also consider imposing an upper limit on the number of items returned to prevent potential Denial of Service attacks. For GET requests that return paginated data, include metadata indicating the total number of resources available in the collection. This helps clients understand the extent of the data set.
 
@@ -156,7 +156,7 @@ Support partial responses for large binary resources. For resources with large b
 
 The response message indicates that this is a partial response by returning HTTP status code 206. The Content-Length header specifies the actual number of bytes returned in the message body (not the size of the resource), and the Content-Range header indicates which part of the resource this is (bytes 0-2499 out of 4580):
 
-![](media/6fe00afc456197d04e413382c4f115ea.png)
+![](https://imgur.com/O9mpSv6.png)
 
 A subsequent request from the client application can retrieve the remainder of the resource. This ensures that the requests are still atomic and stateless.
 
@@ -192,7 +192,7 @@ The code implementing an HTTP operation should include comprehensive exception h
 
 For example, if a user request leads to a database constraint violation (such as attempting to delete a customer with outstanding orders), return status code 409 (Conflict) with a message explaining the conflict. If the request cannot be fulfilled due to other issues, return status code 400 (Bad Request). Refer to the full list of HTTP status codes on the W3C website for more details.
 
-This code example traps different conditions and returns an appropriate response: ![](media/aa5a643af78f47871746a75353e3a6a6.png)
+This code example traps different conditions and returns an appropriate response: ![](https://imgur.com/BygsoK0.png)
 
 **Handle Exceptions Consistently and Log Information About Errors**
 
@@ -208,7 +208,7 @@ In a distributed environment with web servers and client applications, network t
 
 The HTTP 1.1 protocol supports caching through the \`Cache-Control\` header, which can be used by clients and intermediate servers to cache responses. When a client sends an HTTP GET request, the response can include a \`Cache-Control\` header that specifies whether the response data can be cached, how long it can be stored, and when it should be considered outdated. This helps reduce the amount of traffic and improves efficiency by avoiding redundant data transfers.
 
-The following example shows an HTTP GET request and the corresponding response that includes a Cache-Control header: ![](media/d1f047c3b8f9a9fd87082347a9cb01b1.png)
+The following example shows an HTTP GET request and the corresponding response that includes a Cache-Control header: ![](https://imgur.com/QHJmNJe.png)
 
 In this example, the Cache-Control header specifies that the data returned should be expired after 600 seconds, and is only suitable for a single client and must not be stored in a shared cache used by other clients (it is *private*). The Cache-Control header could specify *public* rather than *private* in which case the data can be stored in a shared cache, or it could specify *no-store* in which case the data must not be cached by the client.
 
