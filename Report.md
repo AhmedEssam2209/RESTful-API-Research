@@ -2,26 +2,26 @@
 
 ## Table of contents
 
--   **Introduction**
-1.  What is an API
-2.  RESTful APIs
--   **Design & Implementation**
-1.  Business resources and APIs
-2.  HTTP methods
-3.  Asynchronous operations
-4.  Filtering & Pagination
-5.  Partial responses
-6.  HATEOAS navigation
-7.  Versioning
-8.  Exception Handling
-9.  Caching
--   **Integration**
-1.  Publishing
-2.  Documentation
-3.  Client SDK
-4.  Testing
-5.  Monitoring
--   **References**
+- **Introduction**
+   1.  What is an API
+   2.  RESTful APIs
+- **Design & Implementation**
+   1.  Business resources and APIs
+   2.  HTTP methods
+   3.  Asynchronous operations
+   4.  Filtering & Pagination
+   5.  Partial responses
+   6.  HATEOAS navigation
+   7.  Versioning
+   8.  Exception Handling
+   9.  Caching
+-  **Integration**
+   1.  Publishing
+   2.  Documentation
+   3.  Client SDK
+   4.  Testing
+   5.  Monitoring
+-  **References**
 
 ## Introduction
 
