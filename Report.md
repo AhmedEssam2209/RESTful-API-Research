@@ -130,7 +130,8 @@ Additionally, expose an endpoint that allows clients to check the status of the 
 
 If the client sends a GET request to this endpoint, the response should contain the current status of the request. Optionally, it could also include an estimated time to completion or a link to cancel the operation.
 
-![](https://imgur.com/7OLAcWq.png)If the asynchronous operation creates a new resource, the status endpoint should return status code 303 (See Other) after the operation completes. In the 303 response, include a Location header that gives the URI of the new resource.
+![](https://imgur.com/7OLAcWq.png)
+If the asynchronous operation creates a new resource, the status endpoint should return status code 303 (See Other) after the operation completes. In the 303 response, include a Location header that gives the URI of the new resource.
 
 **Empty sets in message bodies**
 
