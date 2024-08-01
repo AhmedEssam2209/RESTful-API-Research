@@ -2,7 +2,7 @@
 
 ## Table of contents
 
-- **Introduction**
+- [**Introduction**](#introduction)
    1.  What is an API
    2.  RESTful APIs
 - **Design & Implementation**
@@ -304,6 +304,6 @@ Maintaining an open connection can enhance responsiveness by reducing latency an
 
 ## References
 
--   W3C
--   Microsoft
--   Geeks For Geeks
+-   [W3C](https://www.w3.org/)
+-   [Microsoft](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design)
+-   [Geeks For Geeks](https://www.geeksforgeeks.org/rest-api-introduction/)
