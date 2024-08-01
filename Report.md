@@ -5,7 +5,7 @@
 - [**Introduction**](#introduction)
    1.  What is an API
    2.  RESTful APIs
-- **Design & Implementation**
+- [**Design & Implementation**](#design--implementation)
    1.  Business resources and APIs
    2.  HTTP methods
    3.  Asynchronous operations
@@ -15,13 +15,13 @@
    7.  Versioning
    8.  Exception Handling
    9.  Caching
--  **Integration**
+-  [**Integration**](#integration)
    1.  Publishing
    2.  Documentation
    3.  Client SDK
    4.  Testing
    5.  Monitoring
--  **References**
+-  [**References**](#references)
 
 ## Introduction
 
